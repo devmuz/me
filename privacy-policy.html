@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy — mz.dxbapps</title>
+<meta name="description" content="Privacy Policy for apps developed by Mohammad Mozammil (mz.dxbapps). This policy explains how we collect, use, and protect your data."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#04080d;--surface:#080f18;--surface2:#0b1622;
+  --accent:#00d4ff;--accent2:#0099cc;
+  --text:#dde6f0;--muted:#526070;
+  --border:rgba(0,212,255,0.10);--border2:rgba(0,212,255,0.06);
+  --mono:'Space Mono',monospace;--sans:'Space Grotesk',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.7;overflow-x:hidden}
+
+/* NAV */
+nav{
+  position:fixed;top:0;width:100%;z-index:200;
+  padding:1.1rem 4rem;display:flex;justify-content:space-between;align-items:center;
+  backdrop-filter:blur(20px) saturate(180%);
+  background:rgba(4,8,13,.8);border-bottom:1px solid var(--border2);
+}
+.nav-logo{font-family:var(--mono);font-size:1rem;color:var(--accent);text-decoration:none;letter-spacing:.15em}
+.nav-back{
+  display:flex;align-items:center;gap:.5rem;
+  font-family:var(--mono);font-size:.75rem;color:var(--muted);
+  text-decoration:none;letter-spacing:.08em;
+  transition:color .3s;
+}
+.nav-back:hover{color:var(--accent)}
+.nav-back::before{content:'←';font-size:.9rem}
+
+/* HERO STRIP */
+.pp-hero{
+  padding:8rem 4rem 4rem;
+  border-bottom:1px solid var(--border2);
+  background:linear-gradient(180deg,rgba(0,212,255,.03) 0%,transparent 100%);
+  position:relative;
+}
+.pp-hero::after{
+  content:'';position:absolute;bottom:0;left:4rem;right:4rem;
+  height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);
+  opacity:.3;
+}
+.pp-inner{max-width:860px;margin:0 auto}
+.pp-badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;
+  color:var(--accent);border:1px solid var(--border);
+  padding:.3rem .9rem;border-radius:99px;margin-bottom:1.5rem;
+}
+.pp-title{font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-.02em;margin-bottom:1rem}
+.pp-meta{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem}
+.pp-meta-item{font-family:var(--mono);font-size:.75rem;color:var(--muted)}
+.pp-meta-item span{color:var(--accent)}
+
+/* LAYOUT */
+.pp-layout{max-width:860px;margin:0 auto;padding:4rem;display:grid;grid-template-columns:220px 1fr;gap:4rem;align-items:start}
+
+/* TOC SIDEBAR */
+.toc{
+  position:sticky;top:5.5rem;
+  background:var(--surface);border:1px solid var(--border2);
+  border-radius:12px;padding:1.5rem;
+}
+.toc-title{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.15em;
+  color:var(--accent);text-transform:uppercase;margin-bottom:1.2rem;
+}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:.3rem}
+.toc-list a{
+  font-size:.82rem;color:var(--muted);text-decoration:none;
+  padding:.4rem .6rem;border-radius:4px;display:block;
+  transition:all .2s;border-left:2px solid transparent;
+}
+.toc-list a:hover{color:var(--accent);background:rgba(0,212,255,.05);border-left-color:var(--accent)}
+
+/* CONTENT */
+.pp-content{min-width:0}
+.pp-section{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border2)}
+.pp-section:last-child{border-bottom:none}
+.section-num{
+  font-family:var(--mono);font-size:.7rem;color:var(--accent);
+  letter-spacing:.15em;text-transform:uppercase;margin-bottom:.4rem;display:block;
+}
+.section-head{
+  font-size:1.35rem;font-weight:700;margin-bottom:1.2rem;
+  letter-spacing:-.01em;
+}
+.pp-content p{color:#7a9ab0;font-size:.95rem;line-height:1.85;margin-bottom:1rem}
+.pp-content p:last-child{margin-bottom:0}
+.pp-content strong{color:var(--text);font-weight:600}
+.pp-content a{color:var(--accent);text-decoration:none}
+.pp-content a:hover{text-decoration:underline}
+
+/* DATA TABLE */
+.data-table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.88rem}
+.data-table th{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);
+  padding:.7rem 1rem;text-align:left;
+  border-bottom:1px solid var(--border);
+  background:var(--surface2);
+}
+.data-table td{
+  padding:.75rem 1rem;border-bottom:1px solid var(--border2);
+  color:#7a9ab0;vertical-align:top;
+}
+.data-table tr:last-child td{border-bottom:none}
+.data-table td:first-child{color:var(--text);font-weight:500}
+
+/* LIST */
+.pp-list{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin:1rem 0}
+.pp-list li{
+  display:flex;align-items:flex-start;gap:.75rem;
+  font-size:.92rem;color:#7a9ab0;line-height:1.65;
+}
+.pp-list li::before{content:'▸';color:var(--accent);font-size:.7rem;margin-top:.3rem;flex-shrink:0}
+
+/* HIGHLIGHT BOX */
+.info-box{
+  background:rgba(0,212,255,.04);
+  border:1px solid rgba(0,212,255,.15);
+  border-left:3px solid var(--accent);
+  border-radius:0 8px 8px 0;
+  padding:1.1rem 1.4rem;margin:1.2rem 0;
+  font-size:.9rem;color:#8ea5b8;line-height:1.75;
+}
+.info-box strong{color:var(--accent)}
+
+/* CONTACT CARD */
+.contact-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:12px;padding:1.8rem;margin-top:1rem;
+}
+.contact-row{
+  display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem;
+  font-size:.9rem;
+}
+.contact-row:last-child{margin-bottom:0}
+.contact-label{font-family:var(--mono);font-size:.72rem;color:var(--muted);min-width:80px}
+.contact-val{color:var(--text)}
+.contact-val a{color:var(--accent);text-decoration:none}
+
+/* FOOTER */
+footer{
+  text-align:center;padding:2rem 4rem;
+  border-top:1px solid var(--border2);
+}
+footer p{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+footer span{color:var(--accent)}
+
+/* RESPONSIVE */
+@media(max-width:780px){
+  nav{padding:1rem 1.5rem}
+  .pp-hero{padding:7rem 1.5rem 3rem}
+  .pp-layout{padding:2rem 1.5rem;grid-template-columns:1fr;gap:2rem}
+  .toc{position:static}
+}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">mz.dxbapps</a>
+  <a class="nav-back" href="index.html"> Back to Portfolio</a>
+</nav>
+
+<div class="pp-hero">
+  <div class="pp-inner">
+    <div class="pp-badge">📄 Legal Document</div>
+    <h1 class="pp-title">Privacy Policy</h1>
+    <p style="color:#7a9ab0;font-size:.98rem;max-width:600px">This policy applies to all mobile applications developed and published by Mohammad Mozammil (mz.dxbapps). Please read it carefully before using any of our apps.</p>
+    <div class="pp-meta">
+      <div class="pp-meta-item">Last Updated: <span>January 1, 2025</span></div>
+      <div class="pp-meta-item">Effective Date: <span>January 1, 2025</span></div>
+      <div class="pp-meta-item">Developer: <span>Mohammad Mozammil</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="pp-layout">
+
+  <!-- TABLE OF CONTENTS -->
+  <aside>
+    <div class="toc">
+      <div class="toc-title">// Contents</div>
+      <ul class="toc-list">
+        <li><a href="#overview">1. Overview</a></li>
+        <li><a href="#data-collected">2. Data We Collect</a></li>
+        <li><a href="#how-we-use">3. How We Use Data</a></li>
+        <li><a href="#third-parties">4. Third-Party Services</a></li>
+        <li><a href="#data-storage">5. Data Storage</a></li>
+        <li><a href="#children">6. Children's Privacy</a></li>
+        <li><a href="#your-rights">7. Your Rights</a></li>
+        <li><a href="#security">8. Security</a></li>
+        <li><a href="#changes">9. Policy Changes</a></li>
+        <li><a href="#contact">10. Contact Us</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="pp-content">
+
+    <div class="pp-section" id="overview">
+      <span class="section-num">01 / Overview</span>
+      <h2 class="section-head">Who We Are</h2>
+      <p>Mohammad Mozammil, operating under the brand <strong>mz.dxbapps</strong>, is an independent mobile app developer based in Dubai, UAE. This Privacy Policy governs all applications published by mz.dxbapps on the Apple App Store and Google Play Store.</p>
+      <p>We are committed to protecting your privacy. This document explains what data our apps collect, why we collect it, how it is stored, and your rights as a user. Where an individual app collects additional or different data, a supplementary notice will be provided within that app.</p>
+      <div class="info-box">
+        <strong>Short version:</strong> We collect only what we need to make our apps work. We don't sell your data. We don't share it with advertisers. You can request deletion of your data at any time.
+      </div>
+    </div>
+
+    <div class="pp-section" id="data-collected">
+      <span class="section-num">02 / Data We Collect</span>
+      <h2 class="section-head">Information We Collect</h2>
+      <p>The data we collect depends on the specific app and features you use. Generally, our apps may collect the following categories of information:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Examples</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Account Data</td>
+            <td>Name, email address, username</td>
+            <td>Authentication &amp; profile</td>
+          </tr>
+          <tr>
+            <td>Device Data</td>
+            <td>Device model, OS version, unique device ID</td>
+            <td>Crash reporting, compatibility</td>
+          </tr>
+          <tr>
+            <td>Usage Data</td>
+            <td>Features used, session duration, in-app actions</td>
+            <td>App improvement, analytics</td>
+          </tr>
+          <tr>
+            <td>Location Data</td>
+            <td>Approximate or precise location</td>
+            <td>Only when required by app features</td>
+          </tr>
+          <tr>
+            <td>Payment Data</td>
+            <td>Transaction ID, purchase status</td>
+            <td>In-app purchase validation (no card data stored)</td>
+          </tr>
+          <tr>
+            <td>Communications</td>
+            <td>Support messages, feedback</td>
+            <td>Customer support</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>We collect <strong>only the minimum data necessary</strong> for the app to function. If an app does not require a feature (e.g. location), it will not request that permission.</p>
+    </div>
+
+    <div class="pp-section" id="how-we-use">
+      <span class="section-num">03 / How We Use Data</span>
+      <h2 class="section-head">How We Use Your Information</h2>
+      <p>We use collected data for the following purposes:</p>
+      <ul class="pp-list">
+        <li>To provide, operate, and maintain the features of our applications</li>
+        <li>To authenticate users and manage accounts securely</li>
+        <li>To process in-app purchases and subscriptions</li>
+        <li>To send important app-related notifications (updates, security alerts)</li>
+        <li>To diagnose crashes and improve app stability</li>
+        <li>To understand how users interact with the app and improve the experience</li>
+        <li>To respond to support requests and user feedback</li>
+        <li>To comply with legal obligations</li>
+      </ul>
+      <p>We do <strong>not</strong> use your data to serve advertisements, build marketing profiles, or sell to any third party.</p>
+    </div>
+
+    <div class="pp-section" id="third-parties">
+      <span class="section-num">04 / Third-Party Services</span>
+      <h2 class="section-head">Third-Party Services We May Use</h2>
+      <p>Some of our apps integrate third-party SDKs and services to power core functionality. These services have their own privacy policies:</p>
+      <ul class="pp-list">
+        <li><strong>Firebase (Google)</strong> — Authentication, database, crash reporting, and analytics. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy ↗</a></li>
+        <li><strong>Apple App Store / Google Play</strong> — In-app purchases and distribution. Governed by Apple and Google's respective policies.</li>
+        <li><strong>Stripe / RevenueCat</strong> — Payment processing for subscriptions. Card details are never seen or stored by us.</li>
+        <li><strong>Google Maps SDK</strong> — Location-based features where applicable. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy ↗</a></li>
+        <li><strong>Sentry / Crashlytics</strong> — Crash and error reporting to improve stability.</li>
+      </ul>
+      <div class="info-box">
+        <strong>Note:</strong> Each individual app page on the App Store / Play Store lists the specific third-party SDKs used by that app. Check the app's store listing for the most accurate list.
+      </div>
+    </div>
+
+    <div class="pp-section" id="data-storage">
+      <span class="section-num">05 / Data Storage &amp; Retention</span>
+      <h2 class="section-head">Where Your Data Lives</h2>
+      <p>Data may be stored on your device locally and/or on secure cloud servers (primarily Google Firebase infrastructure). Servers are located in the United States and/or EU regions depending on the app.</p>
+      <p>We retain your personal data <strong>only as long as necessary</strong> to provide the service. If you delete your account or request data deletion, we will remove your personal data within <strong>30 days</strong>, except where we are required by law to retain it longer.</p>
+      <p>Analytics and crash data are retained in anonymized or aggregated form and may be kept longer for product improvement purposes.</p>
+    </div>
+
+    <div class="pp-section" id="children">
+      <span class="section-num">06 / Children's Privacy</span>
+      <h2 class="section-head">Children Under 13</h2>
+      <p>Our apps are <strong>not directed at children under the age of 13</strong> (or 16 in the European Union under GDPR). We do not knowingly collect personal data from children.</p>
+      <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately at <a href="mailto:mz.dxbapps@gmail.com">mz.dxbapps@gmail.com</a> and we will delete it promptly.</p>
+      <p>Apps specifically designed for children will include a separate, age-appropriate privacy notice compliant with COPPA and relevant local regulations.</p>
+    </div>
+
+    <div class="pp-section" id="your-rights">
+      <span class="section-num">07 / Your Rights</span>
+      <h2 class="section-head">Your Data Rights</h2>
+      <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+      <ul class="pp-list">
+        <li><strong>Access</strong> — Request a copy of the personal data we hold about you</li>
+        <li><strong>Correction</strong> — Ask us to correct inaccurate or incomplete data</li>
+        <li><strong>Deletion</strong> — Request that we delete your personal data ("right to be forgotten")</li>
+        <li><strong>Portability</strong> — Request your data in a machine-readable format</li>
+        <li><strong>Objection</strong> — Object to processing of your data in certain circumstances</li>
+        <li><strong>Withdrawal of consent</strong> — Withdraw consent at any time where processing is based on consent</li>
+      </ul>
+      <p>To exercise any of these rights, contact us at <a href="mailto:mz.dxbapps@gmail.com">mz.dxbapps@gmail.com</a>. We will respond within <strong>30 days</strong>. Users in the EU/EEA are covered under GDPR; California residents are covered under CCPA.</p>
+    </div>
+
+    <div class="pp-section" id="security">
+      <span class="section-num">08 / Security</span>
+      <h2 class="section-head">How We Protect Your Data</h2>
+      <p>We implement industry-standard security measures to protect your information, including:</p>
+      <ul class="pp-list">
+        <li>HTTPS / TLS encryption for all data in transit</li>
+        <li>Encrypted storage for sensitive data at rest</li>
+        <li>Firebase Security Rules limiting data access to authorised users only</li>
+        <li>Regular dependency updates to patch known vulnerabilities</li>
+        <li>No storage of raw payment card details — handled exclusively by PCI-compliant processors</li>
+      </ul>
+      <p>While we take all reasonable precautions, no method of internet transmission or electronic storage is 100% secure. If you discover a security vulnerability, please disclose it responsibly to <a href="mailto:mz.dxbapps@gmail.com">mz.dxbapps@gmail.com</a>.</p>
+    </div>
+
+    <div class="pp-section" id="changes">
+      <span class="section-num">09 / Policy Changes</span>
+      <h2 class="section-head">Updates to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our apps, legal requirements, or best practices. When we do, we will revise the <strong>Last Updated</strong> date at the top of this page.</p>
+      <p>For significant changes, we will notify users through the app or via email (where we have your address). Continued use of the app after changes are posted constitutes your acceptance of the updated policy.</p>
+      <p>We encourage you to review this policy periodically. The current version is always available at this URL.</p>
+    </div>
+
+    <div class="pp-section" id="contact">
+      <span class="section-num">10 / Contact</span>
+      <h2 class="section-head">Get in Touch</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please reach out:</p>
+      <div class="contact-card">
+        <div class="contact-row">
+          <span class="contact-label">Developer</span>
+          <span class="contact-val">Mohammad Mozammil</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Brand</span>
+          <span class="contact-val">mz.dxbapps</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Location</span>
+          <span class="contact-val">Dubai, UAE 🇦🇪</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Email</span>
+          <span class="contact-val"><a href="mailto:mz.dxbapps@gmail.com">mz.dxbapps@gmail.com</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Response</span>
+          <span class="contact-val">Within 30 days</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <p>© 2025 <span>Mohammad Mozammil</span> · mz.dxbapps · Dubai, UAE · <a href="index.html" style="color:var(--accent);text-decoration:none">Back to Portfolio</a></p>
+</footer>
+
+</body>
+</html>
